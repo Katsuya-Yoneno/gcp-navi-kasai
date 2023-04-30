@@ -1,0 +1,23 @@
+.navbar {
+    padding: 1rem 0;
+    background-color: #4CAF50;
+  }
+  
+  .navbar-brand {
+    font-size: 2rem;
+    color: #f6f0f0;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+    color: #ddb112;
+    margin: 0 1rem;
+  }
+  
+  .container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  
+  

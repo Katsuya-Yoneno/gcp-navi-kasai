@@ -1,0 +1,6 @@
+database:
+  host: localhost
+  port: 3306
+  user: yoneno_dev
+  password: yoneno_dev
+  name: yoneno_dev_db

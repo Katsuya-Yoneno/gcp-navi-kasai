@@ -1,0 +1,14 @@
+#ユーザ追加
+CREATE USER 'yoneno_dev'@'localhost' IDENTIFIED WITH mysql_native_password BY 'yoneno_dev';
+#権限付与
+GRANT ALL ON yoneno_dev_db.* TO 'yoneno_dev'@'localhost';
+#ログイン
+mysql -u yoneno_dev -h localhost -p
+
+#テーブル作成
+CREATE TABLE questions_tbl (
+  id INT NOT NULL AUTO_INCREMENT,
+  question TEXT NOT NULL,
+  answer TEXT NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
