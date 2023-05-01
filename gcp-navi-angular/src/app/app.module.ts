@@ -6,17 +6,22 @@ import { QuestionListComponent } from './questions/questions.component';
 import { HttpClientModule } from '@angular/common/http';
 import { QuestionService } from './questions.service';
 import { FirstOptionsComponent } from './first-options/first-options.component';
+import { ChallengeQuestionsComponent } from './challenge-questions/challenge-questions.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionListComponent,
-    FirstOptionsComponent
+    FirstOptionsComponent,
+    ChallengeQuestionsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [QuestionService],
   bootstrap: [AppComponent]
