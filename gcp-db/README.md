@@ -1,3 +1,3 @@
 # DB(postgres)
 
-# usage: docker-compose up -d
+ usage: docker-compose up -d

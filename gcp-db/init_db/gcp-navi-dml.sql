@@ -31,4 +31,21 @@ VALUES (
         ''
 );
 
+insert into answers (id,question_id,correct_answer,answer1,answer2,answer3,answer4,answer5,answer6,answer7,answer8,answer9,answer10)
+VALUES (
+        2,
+		2,
+        2,
+		'Key Management Service (KMS)を使用しない',
+		'Google Cloud Storageの暗号化を使用しない',
+		'サードパーティのディスク暗号化製品を使用しない',
+		'Identity and Access Management（IAM）を使用しない',
+        '',
+        '',
+        '',
+        '',
+        '',
+        ''
+);
+
 insert into category (id, category_id, category) values (1,1,'セキュリティ');

@@ -1,13 +1,13 @@
 version: '3'
 
 services:
-  cc-db:
+  gcp-navi-db:
       image: postgres:latest
       restart: always
       container_name: gcp-navi-db
       environment:
-        POSTGRES_USER: 'postgres' # DBのユーザー名（＝DB名）
-        POSTGRES_PASSWORD: 'postgres' # DBのパスワード
+        POSTGRES_USER: 'postgres' 
+        POSTGRES_PASSWORD: 'postgres' 
       volumes:
         - ./init_db:/docker-entrypoint-initdb.d
       ports:
