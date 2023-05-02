@@ -20,14 +20,14 @@ const (
 )
 
 type question struct {
-	QuestionId   string  `json:"question_id"`
-	Question      string `json:"question"`
-	Category      string `json:"category"`
-	CorrectAns int `json: "correct_ans`
-	Ans1     string `json: ans1`
-	Ans2     string `json:ans2`
-	Ans3     string `json:ans3`
-	Ans4     string `json:ans4`
+	QuestionId		string  `json:"id"`
+	Question    	string `json:"question"`
+	Category      	string `json:"category"`
+	CorrectAns 		int `json:"correct_ans`
+	Ans1     		string `json:"ans1"`
+	Ans2     		string `json:"ans2"`
+	Ans3     		string `json:"ans3"`
+	Ans4     		string `json:"ans4"`
 	
 }
 var questions []question 
