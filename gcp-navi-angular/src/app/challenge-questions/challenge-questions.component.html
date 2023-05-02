@@ -1,0 +1,10 @@
+<h2>問題にチャレンジ</h2>
+<div *ngIf="questions">
+  <div *ngFor="let question of questions | paginate: { itemsPerPage: 1, currentPage: p }">
+    <div *ngIf="question.question">
+      <div>問題です</div>
+      <div>{{ question.question }}</div>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

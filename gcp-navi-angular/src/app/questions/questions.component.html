@@ -1,23 +1,24 @@
 <table *ngIf="questions">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Question</th>
-        <th>Answer 1</th>
-        <th>Answer 2</th>
-        <th>Answer 3</th>
-        <th>Answer 4</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let question of questions">
-        <td>{{ question.id }}</td>
-        <td>{{ question.question }}</td>
-        <td>{{ question.ans1 }}</td>
-        <td>{{ question.ans2 }}</td>
-        <td>{{ question.ans3 }}</td>
-        <td>{{ question.ans4 }}</td>
-      </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Category</th>
+      <th>Question</th>
+      <th>Answer 1</th>
+      <th>Answer 2</th>
+      <th>Answer 3</th>
+      <th>Answer 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let question of questions">
+      <td>{{ question.id }}</td>
+      <td>{{ question.category }}</td>
+      <td>{{ question.question }}</td>
+      <td>{{ question.ans1 }}</td>
+      <td>{{ question.ans2 }}</td>
+      <td>{{ question.ans3 }}</td>
+      <td>{{ question.ans4 }}</td>
+    </tr>
+  </tbody>
 </table>
-  
