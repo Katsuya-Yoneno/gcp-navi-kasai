@@ -62,6 +62,15 @@ var questions = []question{
 		Ans4:       "Google Cloud Marketplaceからソフトウェアをインストールする",
 		CorrectAns: "ans4",
 	},
+	{
+		Id:         "6",
+		Question:   "Google Cloud Compute Engineにおいて、Googleによって管理されるサービスを利用するにはどうすればいいですか？",
+		Ans1:       "Google Cloud Storageにアクセスする",
+		Ans2:       "Google Cloud SQLを使用する",
+		Ans3:       "APIキーを生成する",
+		Ans4:       "Google Cloud Marketplaceからソフトウェアをインストールする",
+		CorrectAns: "ans4",
+	},
 }
 
 func getQuestions(c *gin.Context) {
