@@ -1,9 +1,28 @@
 <h2>問題にチャレンジ</h2>
-<div *ngIf="questions">
-  <div *ngFor="let question of questions | paginate: { itemsPerPage: 1, currentPage: p }">
+<div class="container" *ngIf="questions">
+  <div *ngFor="let question of questions | paginate: { itemsPerPage: 1, currentPage: p }" class="question">
     <div *ngIf="question.question">
-      <div>問題です</div>
-      <div>{{ question.question }}</div>
+      <div>■{{ question.question }}</div><br>
+      <div>
+        <button class="btn" >
+          1. {{ question.ans1 }}
+        </button>
+      </div>
+      <div>
+        <button class="btn" >
+          2. {{ question.ans2 }}
+        </button>
+      </div>
+      <div>
+        <button class="btn" >
+          3. {{ question.ans3 }}
+        </button>
+      </div>
+      <div>
+        <button class="btn" >
+          4. {{ question.ans4 }}
+        </button>
+      </div>
     </div>
   </div>
   <pagination-controls (pageChange)="p = $event"></pagination-controls>
