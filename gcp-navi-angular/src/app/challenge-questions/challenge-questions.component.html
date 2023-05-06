@@ -23,8 +23,8 @@
           4. {{ question.ans4 }}
         </button>
       </div>
-      <div *ngIf="isAnswered && isCorrect && i === p - 1">正解！</div>
-      <div *ngIf="isAnswered && !isCorrect && i === p - 1">不正解！</div>
+      <div *ngIf="isAnswered && isCorrect">正解！</div>
+      <div *ngIf="isAnswered && !isCorrect">不正解！</div>
       <!-- <div *ngIf="isAnswered">正解は {{ question.correct_ans }}</div> -->
     </div>
   </div>

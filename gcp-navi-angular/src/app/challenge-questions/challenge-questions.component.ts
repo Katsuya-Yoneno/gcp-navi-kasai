@@ -35,9 +35,11 @@ export class ChallengeQuestionsComponent implements OnInit {
     }
   }
 
-  // ページが切り替わったときに、isAnsweredをリセットする
-  paginationControlsEvent(event: any): void {
+  // ページが切り替わったときに、情報をリセットする
+  paginationControlsEvent(pageNumber: number): void {
+    this.p = pageNumber;
     this.isAnswered = false;
+    this.isCorrect = false;
   }
   
 }
