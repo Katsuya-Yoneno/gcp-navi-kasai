@@ -1,29 +1,32 @@
 <h2>問題にチャレンジ</h2>
 <div class="container" *ngIf="questions">
-  <div *ngFor="let question of questions | paginate: { itemsPerPage: 1, currentPage: p }" class="question">
+  <div *ngFor="let question of questions | paginate: { itemsPerPage: 1, currentPage: p }; let i = index" class="question">
     <div *ngIf="question.question">
       <div>■{{ question.question }}</div><br>
       <div>
-        <button class="btn" >
+        <button class="btn" (click)="showAnswer(1, question.correct_ans)">
           1. {{ question.ans1 }}
         </button>
       </div>
       <div>
-        <button class="btn" >
+        <button class="btn" (click)="showAnswer(2, question.correct_ans)">
           2. {{ question.ans2 }}
         </button>
       </div>
       <div>
-        <button class="btn" >
+        <button class="btn" (click)="showAnswer(3, question.correct_ans)">
           3. {{ question.ans3 }}
         </button>
       </div>
       <div>
-        <button class="btn" >
+        <button class="btn" (click)="showAnswer(4, question.correct_ans)">
           4. {{ question.ans4 }}
         </button>
       </div>
+      <div *ngIf="isAnswered && isCorrect && i === p - 1">正解！</div>
+      <div *ngIf="isAnswered && !isCorrect && i === p - 1">不正解！</div>
+      <!-- <div *ngIf="isAnswered">正解は {{ question.correct_ans }}</div> -->
     </div>
   </div>
-  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  <pagination-controls (pageChange)="paginationControlsEvent($event)"></pagination-controls>
 </div>

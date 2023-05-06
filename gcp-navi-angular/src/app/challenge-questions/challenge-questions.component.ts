@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Question } from '../question';
 import { QuestionService } from '../questions.service';
+import { PaginationControlsComponent } from 'ngx-pagination';
 
 @Component({
   selector: 'app-questions',
@@ -8,7 +9,10 @@ import { QuestionService } from '../questions.service';
   styleUrls: ['./challenge-questions.component.css']
 })
 export class ChallengeQuestionsComponent implements OnInit {
+  @ViewChild(PaginationControlsComponent, { static: false }) paginator!: PaginationControlsComponent;
   p: number = 1; 
+  isCorrect: boolean = false;
+  isAnswered: boolean = false;
   questions: Question[] = [];
 
   constructor(private questionService: QuestionService) { }
@@ -19,4 +23,21 @@ export class ChallengeQuestionsComponent implements OnInit {
       console.log('問題一覧', this.questions);
     });
   }
+  
+  //問題の正解・不正解を判定
+  showAnswer(selectedAnswer: number, correctAnswer: number) {
+    console.log('answer:', correctAnswer)
+    this.isAnswered = true;
+    if (selectedAnswer === correctAnswer) {
+      this.isCorrect = true;
+    } else {
+      this.isCorrect = false;
+    }
+  }
+
+  // ページが切り替わったときに、isAnsweredをリセットする
+  paginationControlsEvent(event: any): void {
+    this.isAnswered = false;
+  }
+  
 }

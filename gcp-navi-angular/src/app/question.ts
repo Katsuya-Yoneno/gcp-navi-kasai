@@ -1,14 +1,14 @@
 export class Question {
-    id: string;
+    id: number;
     question: string = '';
     category: string = '';
     ans1: string = '';
     ans2: string = '';
     ans3: string = '';
     ans4: string = '';
-    correct_ans: string = '';
+    correct_ans: number = 0;
   
-    constructor(id: string, question: string, category: string, ans1: string, ans2: string, ans3: string, ans4: string, correct_ans: string) {
+    constructor(id: number, question: string, category: string, ans1: string, ans2: string, ans3: string, ans4: string, correct_ans: number) {
       this.id = id;
       this.question = question;
       this.category = category;

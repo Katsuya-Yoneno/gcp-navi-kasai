@@ -15,7 +15,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AppComponent,
     QuestionListComponent,
     FirstOptionsComponent,
-    ChallengeQuestionsComponent
+    ChallengeQuestionsComponent,
   ],
   imports: [
     BrowserModule,
