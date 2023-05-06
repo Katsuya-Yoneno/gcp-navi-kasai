@@ -1,4 +1,7 @@
 button {
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
     display: inline-block;
     font-weight: 400;
     color: #212529;
@@ -8,7 +11,7 @@ button {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #f8f9fa;
+    background-color: #9fecb6;
     border: 1px solid #f8f9fa;
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -23,3 +26,14 @@ button {
     border-color: #007bff;
   }
   
+  .button-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .button-style button {
+    font-weight: bold;
+  }

@@ -1,0 +1,9 @@
+.custom-toolbar {
+    background-color: #b6ebbd; /* 任意の背景色 */
+    color: #060606; /* 任意の文字色 */
+    text-decoration: none;
+  }
+  .custom-toolbar a {
+    text-decoration: none;
+  }
+  
