@@ -16,5 +16,5 @@ export class QuestionService {
     return this.http.get<Question[]>(this.apiUrl).pipe(
       map((data: Question[]) => data.map(q => new Question(q.id, q.question, q.category, q.ans1, q.ans2, q.ans3, q.ans4, q.correct_ans)))
     );
-  }  
+  }
 }

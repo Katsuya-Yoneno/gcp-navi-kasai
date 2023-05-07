@@ -22,3 +22,22 @@
   outline: none;
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2ecc71;
 }
+
+.correct {
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  border : 5px solid rgb(7, 105, 27) ;
+  padding: 20px;
+  background-color: #b1e6c7;
+}
+
+.incorrect {
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  border : 5px solid rgb(185, 29, 29) ;
+  padding: 20px;
+  background-color: #e05c5c;
+}
+
